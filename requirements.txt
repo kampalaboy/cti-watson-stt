@@ -1,4 +1,5 @@
 fastapi
+pyaudio
 uvicorn
 websockets
 ibm-watson
