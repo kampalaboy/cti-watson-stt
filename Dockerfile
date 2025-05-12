@@ -1,12 +1,17 @@
 # Use the official Selenium Standalone Chrome image as the base image
-FROM registry.access.redhat.com/ubi8/python-311:latest
+FROM registry.access.redhat.com/ubi8/python-312:latest
+#FROM python:3.11-slim
+#FROM python
 
 # Set the working directory inside the container
 WORKDIR /app
 
+
 # Copy the requirements file to the container and install dependencies
 COPY requirements.txt /app/requirements.txt
 USER 0
+
+
 RUN pip3 install -r requirements.txt
 
 # Copy your FastAPI Python script to the container
