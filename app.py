@@ -370,6 +370,7 @@ def start_stt_session_logic():
 
 
 def stop_stt_session_logic():
+    time.sleep(3)
     global PYAUDIO_STREAM, PYAUDIO_INSTANCE, AUDIO_SOURCE_INSTANCE, RECOGNIZE_THREAD, STT_ACTIVE
 
     if not STT_ACTIVE and PYAUDIO_STREAM is None:
